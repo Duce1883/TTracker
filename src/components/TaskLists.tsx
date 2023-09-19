@@ -1,6 +1,6 @@
 import React from 'react';
-import TaskListItem from "@/components/TaskListItem";
-import {Task} from "@/components/TaskListItem";
+import TaskListItem from "@/src/components/TaskListItem";
+import {Task} from "@/src/components/TaskListItem";
 interface TaskListProps {
     tasks: Task[];
     toggleTask: (id: number) => void;

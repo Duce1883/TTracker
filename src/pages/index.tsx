@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from 'react';
-import TaskInput from '@/components/TaskInput'
-import TaskList from '@/components/TaskLists'
-import {Task} from '@/components/TaskListItem'
-import RadioButtonSet from '@/components/RadioButtonSet'
+import TaskInput from '@/src/components/TaskInput'
+import TaskList from '@/src/components/TaskLists'
+import {Task} from '@/src/components/TaskListItem'
+import RadioButtonSet from '@/src/components/RadioButtonSet'
 
 type listType = 'all' | 'current' | 'completed'
 interface listTypesOptionsType {

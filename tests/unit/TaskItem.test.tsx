@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import TaskListItem from '../../components/TaskListItem';
+import TaskListItem from '@/src/components/TaskListItem';
 
 const toggleTask = jest.fn();
 const deleteTask = jest.fn();
