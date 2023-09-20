@@ -15,7 +15,7 @@ const TaskList: React.FC<TaskListProps> = ({tasks, toggleTask, deleteTask, listT
     });
 
     return (
-        <div>
+        <div className="task_list">
             <h2>{listType === 'all' ? 'Все' : listType === 'current' ? 'Текущие задачи' : 'Уже сделано'}</h2>
             <ul>
                 {filteredTasks.map((task, index) => (

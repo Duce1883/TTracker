@@ -1,0 +1,19 @@
+@import 'task_list';
+
+$text_color: #111111;
+
+.ttracker {
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 1280px;
+  color: $text_color;
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 14px;
+  line-height: 1.3em;
+  h1 {
+    font-size: 40px;
+  }
+  h2 {
+    font-size: 28px;
+  }
+}
