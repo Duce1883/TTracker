@@ -12,24 +12,32 @@ interface TaskListItemProps {
     deleteTask: (index: number) => void;
 }
 
-const TaskListItem: React.FC<TaskListItemProps> = ({task, toggleTask, deleteTask }) => {
+const TaskListItem: React.FC<TaskListItemProps> = ({task, toggleTask, deleteTask}) => {
+
+    let taskTextClass = "task_list_item__text"
+    if (task.completed)
+        taskTextClass += " " + taskTextClass + "--complete"
+
     return (
-        <li>
-            <input
-                type="checkbox"
-                data-testid="checkbox"
-                checked={task.completed}
-                onChange={() => toggleTask(task.id)}
-            />
-            <span
-                style={{
-                    textDecoration: task.completed ? 'line-through' : 'none',
-                    marginLeft: '8px',
-                }}
-            >
+        <li className="task_list_item">
+            <div>
+                <input
+                    type="checkbox"
+                    className="task_list_item__check"
+                    data-testid="checkbox"
+                    checked={task.completed}
+                    onChange={() => toggleTask(task.id)}
+                />
+                <span
+                    className={taskTextClass}
+                    style={{
+                        textDecoration: task.completed ? "line-through" : "none",
+                    }}
+                >
         {task.text}
       </span>
-            <button onClick={() => deleteTask(task.id)}>Delete</button>
+            </div>
+            <button className="task_list_item__btn" onClick={() => deleteTask(task.id)} />
         </li>
     );
 };

@@ -1,10 +1,21 @@
-$border_color: rgba(127, 127, 127, 0.75);
-$shadow_color: rgba(17, 17, 17, 0.3);
+@import 'variables';
 
 .task_list {
   margin: 20px 0;
-  padding: 20px;
-  border: 2px solid $border_color;
+  min-height: 170px;
+  padding: 20px 30px;
+  border: 2px solid $task_list_border_color;
   border-radius: 20px;
-  box-shadow: 3px 3px 5px 0 $shadow_color;
+  box-shadow: 3px 3px 5px 0 $task_list_shadow_color;
+  &__empty {
+    padding: 20px 0;
+    font-size: 28px;
+    font-weight: 700;
+    color: $task_list_empty_text_color;
+  }
+  ul {
+    list-style-type: none;
+    padding: 20px 0;
+    margin: 0;
+  }
 }

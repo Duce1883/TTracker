@@ -1,6 +1,4 @@
-@import 'task_list';
-
-$text_color: #111111;
+@import "variables";
 
 .ttracker {
   margin: 0 auto;
@@ -12,8 +10,32 @@ $text_color: #111111;
   line-height: 1.3em;
   h1 {
     font-size: 40px;
+    color: $text_header_color;
+    margin-bottom: 36px;
   }
   h2 {
     font-size: 28px;
+    color: $text_header_2_color;
+  }
+  &__button {
+    border: none;
+    outline: none;
+    background: $button_bg_color;
+    color: $button_text_color;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color $ani_speed_fast;
+    padding: 6px 14px;
+    &:hover {
+      background: $button_bg_hover_color;
+    }
+    &:disabled {
+      background: $button_bg_disabled_color;
+    }
   }
 }
+
+@import 'task_list';
+@import 'task_list_item';
+@import 'task_input';
+@import "radio_set";

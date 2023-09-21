@@ -12,13 +12,20 @@ const TaskInput: React.FC<TaskInputProps> = ({
                                                  addTask,
                                              }) => {
     return (
-        <div>
+        <div className="task_input">
             <input
                 type="text"
+                placeholder="Введите текст задачи"
                 value={currentTask}
                 onChange={(e) => setCurrentTask(e.target.value)}
             />
-            <button onClick={addTask}>Добавить</button>
+            <button
+                className="ttracker__button task_input__button"
+                onClick={addTask}
+                disabled={!currentTask}
+            >
+                Добавить
+            </button>
         </div>
     );
 };

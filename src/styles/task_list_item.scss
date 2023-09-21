@@ -1,0 +1,50 @@
+@import 'variables';
+
+.task_list_item {
+  font-size: 18px;
+  color: $task_text_color;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px dashed $task_border_color;
+  border-radius: 8px;
+  padding: 10px 12px 10px 6px;
+  &:not(:last-child) {
+    margin-bottom: 8px;
+  }
+  min-height: 28px;
+  &__text {
+    margin-left: 8px;
+    overflow: hidden auto;
+    max-width: 840px;
+    max-height: 200px;
+    min-height: 1.3em;
+    &--complete {
+      opacity: 0.6;
+      text-decoration: line-through;
+    }
+  }
+  &__btn {
+    display: block;
+    width: 24px;
+    height: 24px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: url("../../public/images/trash.svg") no-repeat center/contain;
+    opacity: 0.3;
+    transition: opacity $ani_speed_fast;
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+  &__check {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+  }
+  > div {
+    display: flex;
+    align-items: center;
+  }
+}

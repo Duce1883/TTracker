@@ -1,5 +1,5 @@
-import '@/src/styles/main.scss';
-import {AppProps} from 'next/app';
+import "@/src/styles/main.scss";
+import {AppProps} from "next/app";
 
 function MyApp({Component, pageProps}: AppProps) {
     return <div>

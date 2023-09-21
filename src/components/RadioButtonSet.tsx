@@ -1,7 +1,7 @@
-import React from 'react';
-import RadioButton from './RadioButton'
+import React from "react";
+import RadioButton from "./RadioButton"
 
-type listType = 'all' | 'current' | 'completed'
+type listType = "all" | "current" | "completed"
 
 interface RadioButtonSetProps {
     options: { value: listType; label: string }[];
@@ -11,7 +11,7 @@ interface RadioButtonSetProps {
 
 const RadioButtonSet: React.FC<RadioButtonSetProps> = ({ options, selectedOption, onChange }) => {
     return (
-        <div>
+        <div className="radio_set">
             {options.map(option => (
                 <RadioButton
                     key={option.value}

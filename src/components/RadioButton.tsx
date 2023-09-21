@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-type listType = 'all' | 'current' | 'completed'
+type listType = "all" | "current" | "completed"
 
 interface RadioButtonProps {
     option: { value: listType; label: string };
