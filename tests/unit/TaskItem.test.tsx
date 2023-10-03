@@ -44,12 +44,12 @@ describe('<TaskListItem />', () => {
             text: 'Test Task',
         };
         
-        const { getByText } = render(
+        const { container } = render(
             <TaskListItem task={task} toggleTask={toggleTask} deleteTask={deleteTask}  />
         );
 
-        const deleteButtonElement = getByText('Delete');
-        fireEvent.click(deleteButtonElement);
+        const deleteButtonElement = container.getElementsByClassName('task_list_item__btn');
+        fireEvent.click(deleteButtonElement[0]);
 
         expect(deleteTask).toHaveBeenCalledTimes(1);
     });

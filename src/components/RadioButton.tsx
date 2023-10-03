@@ -10,7 +10,7 @@ interface RadioButtonProps {
 
 const RadioButton: React.FC<RadioButtonProps> = ({ option, selected, onChange }) => {
     return (
-        <div>
+        <div className="radio_button" data-testid={`radio_${option.value}`}>`
             <input
                 type="radio"
                 id={option.value}

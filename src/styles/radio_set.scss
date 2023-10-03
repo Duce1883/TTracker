@@ -2,4 +2,12 @@
 
 .radio_set {
   margin-bottom: 24px;
+  display: flex;
+  flex-flow: row wrap;
+  section {
+
+  }
+  section > div {
+
+  }
 }

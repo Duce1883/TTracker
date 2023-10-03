@@ -10,19 +10,6 @@
     "test": "jest",
     "test:watch": "jest --watch"
   },
-  "jest": {
-    "preset": "ts-jest",
-    "testEnvironment": "jsdom",
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js",
-      "jsx"
-    ],
-    "transform": {
-      "^.+\\.(ts|tsx)$": "ts-jest"
-    }
-  },
   "dependencies": {
     "@types/node": "20.6.1",
     "@types/react": "18.2.21",
